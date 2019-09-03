@@ -7,19 +7,20 @@ import org.junit.jupiter.api.Test;
 class TestMaquinaExpendedora {
 
 	MaquinaExpendedora maquina = new MaquinaExpendedora();
-	Moneda m = new Moneda();
-	Premio p = new Premio();
 	
 	@Test
-	void agregarMonedaTest() {		
+	void agregarMonedaTest() throws Exception {		
+		Moneda m = new Moneda();
 		boolean r = maquina.agregarMoneda(m);
 
 		assertEquals(true, r);
 	}
 	
 	@Test
-	void retirarMonedaTest() {		
+	void retirarMonedaTest() throws Exception {		
+		Moneda m = new Moneda();		
 		maquina.agregarMoneda(m);
+		
 		Moneda r = maquina.retirarMoneda();
 		boolean esMoneda = (r instanceof Moneda);
 		
@@ -27,12 +28,15 @@ class TestMaquinaExpendedora {
 	}
 	
 	@Test
-	void retirarPremio() {
-		boolean r1 = maquina.agregarMoneda(m);
-		Premio r2 = maquina.retirarPremio();
-		boolean esPremio = (r2 instanceof Premio && r1 == true);
+	void retirarPremio() throws Exception {
+		Moneda m = new Moneda();		
+		maquina.agregarMoneda(m);
 		
-		assertEquals(true, esPremio);
+		boolean esPremio = (maquina.retirarPremio() instanceof Premio);
+		
+		boolean r = (maquina.hayPremios() && maquina.hayMonedas() && esPremio);
+		
+		assertEquals(true, r);
 	}
 
 }
