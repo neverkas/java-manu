@@ -1,7 +1,6 @@
-package errores;
+package maquinaExpendedora;
 
 import java.util.NoSuchElementException;
-import java.util.Scanner;
 /*
  * MaquinaExpendedora (3 premios)
  * 
@@ -29,29 +28,33 @@ public class MaquinaExpendedora {
 	Premio premio = new Premio();
 	boolean hayMoneda = false;
 	
-	public boolean agregarMoneda(Moneda m){		
-		if(m == null) { // sino ingresa una moneda
+	public boolean agregarMoneda(Moneda m){				
+		// si el argumento pasado es vacío
+		if(m == null) {
+			throw new NoSuchElementException("No ingresaste una moneda");
+		}
+		// si el objeto es tipo moneda
+		else if(m instanceof Moneda) {
+			hayMoneda = true;	// actualizamos que se ingresó una moneda			
+		}
+		 // sino ingresa algo del tipo Moneda
+		else {
 			throw new NoSuchElementException("No ingresaste una moneda");
 		}
 		
-		else if(m instanceof Moneda) {
-			hayMoneda = true;
-			return true;
-		}
-		else {
-			return false;
-		}
-		
+		return hayMoneda; // devolvemos el estado
 	}
 	
 	public Moneda retirarMoneda() {
+		 // si ingresaron alguna moneda
 		if(hayMoneda) {
-			return moneda;				
+			 // devolvemos el objeto
+			return moneda;
 		}
+		// sino ingresaron monedas
 		else {
-			throw new NoSuchElementException("No hay monedas");
-		}
-			
+			throw new NoSuchElementException("No hay monedas");						
+		}		
 	}
 	
 	public Premio retirarPremio() {

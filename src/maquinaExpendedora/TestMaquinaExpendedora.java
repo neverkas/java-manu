@@ -1,7 +1,6 @@
-package errores;
+package maquinaExpendedora;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 
 import org.junit.jupiter.api.Test;
 
