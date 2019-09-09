@@ -42,7 +42,7 @@ public class MaquinaExpendedora {
 		return (!monedasLista.isEmpty());
 	}
 	
-	public boolean agregarMoneda(Moneda m) throws Exception{				
+	public boolean agregarMoneda() throws Exception{				
 		// si el argumento pasado es vacío
 		if(m == null) {
 			throw noHayMonedaException;
