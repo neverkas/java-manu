@@ -1,8 +1,11 @@
+package iteradores;
 public class DosArraysIterator{
 	int [] array1 = {};
 	int numero;
 	int contador = 0;
 	
+	//public static void main(String[] args) {	
+	//}
 	
 	public DosArraysIterator(int [] arr1, int [] arr2) {
 		array1 = arr1;
