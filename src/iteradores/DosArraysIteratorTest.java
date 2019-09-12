@@ -23,11 +23,8 @@ class DosArraysIteratorTest {
 
 		assertFalse(it.hasNext()); // 1er array -> no tiene elementos, está vacío		
 		assertEquals(1, it.next()); // 2do array -> 1er elemento debe ser 1
-		assertTrue(it.hasNext()); // 2do array -> no deberia haber mas elementos
-		/*		
-		
+		assertTrue(it.hasNext()); // 2do array -> no deberia haber mas elementos		
 		assertEquals(3, it.next()); // 2do array -> 2do elemento debe ser 3
-		*/
 	}
 
 }
