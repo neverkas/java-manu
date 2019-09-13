@@ -31,7 +31,7 @@ public class MaquinaExpendedora {
 	ArrayList<Premio> premios = new ArrayList<Premio>();
 
 	public boolean hayMonedas() {		
-		return !this.monedas.isEmpty();
+		return !monedas.isEmpty();
 	}
 	
 	public boolean agregarMoneda(Moneda m) throws Exception{				
@@ -56,8 +56,8 @@ public class MaquinaExpendedora {
 		 // si ingresaron alguna moneda
 		if(hayMonedas()){						
 			 // devolvemos el objeto
-			Moneda moneda = this.monedas.get(0);
-			this.monedas.remove(moneda);
+			Moneda moneda = monedas.get(0);
+			monedas.remove(moneda);
 			
 			return moneda;
 		}
@@ -68,7 +68,7 @@ public class MaquinaExpendedora {
 	}
 	
 	public boolean hayPremios() {
-		return !this.premios.isEmpty();
+		return !premios.isEmpty();
 	}
 	
 	public boolean agregarPremio(Premio premio) throws Exception{				
@@ -93,7 +93,7 @@ public class MaquinaExpendedora {
 		// si hay premios
 		if(hayPremios()) {			
 			Premio premio = premios.get(0);
-			this.premios.remove(premio);
+			premios.remove(premio);
 			
 			return premio;			
 		}

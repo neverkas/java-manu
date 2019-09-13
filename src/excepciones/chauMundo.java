@@ -1,4 +1,4 @@
-package errores;
+package excepciones;
 
 public class chauMundo {
 	public static void main(String[] args) {

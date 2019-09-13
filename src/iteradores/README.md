@@ -1,5 +1,5 @@
 
-# Precondicion -> Accion -> Postcondicion
+# Mi primer Iterator
 
 # Tests a realizar:
 ## 1. dosArrayVacios
