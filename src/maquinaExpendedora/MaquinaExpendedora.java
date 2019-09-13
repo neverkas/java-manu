@@ -2,7 +2,6 @@ package maquinaExpendedora;
 
 import java.util.NoSuchElementException;
 import java.util.ArrayList;
-import java.util.Arrays;
 /*
  * MaquinaExpendedora (3 premios)
  * 
@@ -28,65 +27,79 @@ import java.util.Arrays;
 public class MaquinaExpendedora {
 	boolean hayMoneda = false;
 	
-	Moneda monedas [] = new Moneda[10];
-	Premio premios [] = new Premio[10];
-
-	ArrayList<Moneda> monedasLista = new ArrayList<Moneda>(Arrays.asList(monedas));
-	ArrayList<Premio> premiosLista = new ArrayList<Premio>(Arrays.asList(premios));
-
-	// Excepciones
-	Exception noHayMonedaException = new NoSuchElementException("No hay moneda");
-	Exception noHayPremioException = new NoSuchElementException("No hay premios");
+	ArrayList<Moneda> monedas = new ArrayList<Moneda>();
+	ArrayList<Premio> premios = new ArrayList<Premio>();
 
 	public boolean hayMonedas() {		
-		return (!monedasLista.isEmpty());
+		return !this.monedas.isEmpty();
 	}
 	
-	public boolean agregarMoneda() throws Exception{				
-		// si el argumento pasado es vacío
+	public boolean agregarMoneda(Moneda m) throws Exception{				
+		// si el argumento es null (no tiene informacion)
 		if(m == null) {
-			throw noHayMonedaException;
+			throw new NoSuchElementException("No hay moneda");					
 		}
-		// si el objeto es tipo moneda
+		// si es tipo moneda
 		else if(m instanceof Moneda) {
-			// la agregamos a la lista
-			monedasLista.add(m);
+			// la agregamos a la lista de monedas
+			monedas.add(m);
+			
+			return true;
 		}
-		 // sino ingresa algo del tipo Moneda
+		// sino ingresa algo del tipo Moneda
 		else {
-			throw noHayMonedaException;
+			throw new NoSuchElementException("No hay moneda");
 		}
-		
-		return hayMonedas(); // devolvemos el estado
 	}
 	
 	public Moneda retirarMoneda() throws Exception {
 		 // si ingresaron alguna moneda
-		if(hayMonedas()) {
+		if(hayMonedas()){						
 			 // devolvemos el objeto
-			Moneda moneda = new Moneda(); // creamos la moneda
+			Moneda moneda = this.monedas.get(0);
+			this.monedas.remove(moneda);
+			
 			return moneda;
 		}
 		// sino ingresaron monedas
 		else {
-			throw noHayMonedaException;						
+			throw new NoSuchElementException("No hay moneda");
 		}		
 	}
 	
 	public boolean hayPremios() {
-		return (!premiosLista.isEmpty());
+		return !this.premios.isEmpty();
+	}
+	
+	public boolean agregarPremio(Premio premio) throws Exception{				
+		// si el argumento es null (no tiene informacion)
+		if(premio == null) {
+			throw new NoSuchElementException("No hay premio");					
+		}
+		// si es tipo premio
+		else if(premio instanceof Premio) {
+			// la agregamos a la lista de monedas
+			premios.add(premio);
+			
+			return true;
+		}
+		// sino ingresa algo del tipo Premio
+		else {
+			throw new NoSuchElementException("No hay premio");			
+		}		
 	}
 	
 	public Premio retirarPremio() throws Exception {
 		// si hay premios
 		if(hayPremios()) {			
-			Premio premio = premiosLista.get(0);
+			Premio premio = premios.get(0);
+			this.premios.remove(premio);
 			
 			return premio;			
 		}
 		// sino hay premios
-		else {
-			throw noHayPremioException;
+		else {			
+			throw new NoSuchElementException("No hay premios");
 		}
 		
 	}
