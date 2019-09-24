@@ -2,7 +2,7 @@
 # Juego de Embarcaciones
 </center>
 <p align="center">
-    <img src= "images/mi-barco-no-se-va-a-undir.png" height=300>
+    <img src= "../../images/mi-barco-no-se-va-a-undir.png" height=300>
 </p>
 
 ## Tipos de embarcaciones
