@@ -41,7 +41,7 @@ class EmbarcacionTest {
 
 		assertEquals(elRoyalFortune.getCarga().size(), 2);
 	}
-	
+
 	@Test
 	void agregarDosCargasDiferentes() {
 		 // inicializo lista enlazada
