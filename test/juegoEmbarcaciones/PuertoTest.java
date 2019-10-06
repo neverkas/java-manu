@@ -1,10 +1,10 @@
-package test;
+package juegoEmbarcaciones;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.LinkedList;
-
 import org.junit.jupiter.api.Test;
+
+import java.util.LinkedList;
 
 import juegoEmbarcaciones.Puerto;
 import juegoEmbarcaciones.carga.*;
@@ -16,7 +16,7 @@ class PuertoTest {
 	void agregarUnaEmbarcacionTest() {
 		Puerto puertoDeSantos = new Puerto("Puerto de Santos");
 		
-		LinkedList<Carga> cargaDelTheFancy = new LinkedList();
+		LinkedList<Carga> cargaDelTheFancy = new LinkedList<>();
 		cargaDelTheFancy.add(new Oro(100));
 		cargaDelTheFancy.add(new Espadas(300));
 				
@@ -31,18 +31,18 @@ class PuertoTest {
 	void agregarTresEmbarcacionesTest() {
 		Puerto puertoDeCartagena = new Puerto("Puerto de Cartagena");
 		
-		LinkedList<Carga> cargaDelTheFancy = new LinkedList();
+		LinkedList<Carga> cargaDelTheFancy = new LinkedList<>();
 		cargaDelTheFancy.add(new Oro(100));
 		cargaDelTheFancy.add(new Espadas(300));
 				
 		Carabela theFancy = new Carabela("The fancy", cargaDelTheFancy);
 		
-		LinkedList<Carga> cargaDelAmity = new LinkedList();
+		LinkedList<Carga> cargaDelAmity = new LinkedList<>();
 		cargaDelAmity.add(new Oro(100));
 		cargaDelAmity.add(new Espadas(300));
 		Carabela amity = new Carabela("Amity", cargaDelAmity);
 
-		LinkedList<Carga> cargaDelRosePink = new LinkedList();
+		LinkedList<Carga> cargaDelRosePink = new LinkedList<>();
 		cargaDelRosePink.add(new Oro(100));
 		cargaDelRosePink.add(new Espadas(300));
 				
@@ -55,5 +55,4 @@ class PuertoTest {
 		assertEquals(3, puertoDeCartagena.listarEmbarcaciones().size());
 		
 	}
-
 }

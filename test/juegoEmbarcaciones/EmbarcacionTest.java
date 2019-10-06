@@ -1,8 +1,8 @@
-package test;
-
-import static org.junit.jupiter.api.Assertions.*;
+package juegoEmbarcaciones;
 
 import java.util.LinkedList;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ import juegoEmbarcaciones.carga.*;
 import juegoEmbarcaciones.embarcacion.*;
 import juegoEmbarcaciones.Puerto;
 
-class EmbarcacionTest {		
+class EmbarcacionTest {
 	@Test
 	void unaCarabelaPuedeCargarTest() {
 		// inicializo lista enlazada
@@ -121,5 +121,4 @@ class EmbarcacionTest {
 
 		assertEquals(3, elRoyalFortune.getCarga().size());
 	}
-
 }
