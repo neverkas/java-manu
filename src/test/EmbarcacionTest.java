@@ -14,7 +14,7 @@ class EmbarcacionTest {
 	@Test
 	void unaCarabelaPuedeCargarTest() {
 		// inicializo lista enlazada
-		LinkedList<Carga> carga = new LinkedList<>();
+		LinkedList<Carga> carga = new LinkedList<>();		
 		// instancio la clase con el constructor		
 		Carabela rebecca = new Carabela("Rebecca", carga);
 		// si implementa la interfaz Cargable, puede cargar
