@@ -1,7 +1,4 @@
-package juegoEmbarcaciones.carga.clases;
-
-import juegoEmbarcaciones.carga.interfaces.Carga;
-import juegoEmbarcaciones.carga.interfaces.Pesable;
+package juegoEmbarcaciones.carga;
 
 public class Granos implements Pesable, Carga{
 	public long cantidad;

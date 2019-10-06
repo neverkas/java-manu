@@ -1,10 +1,8 @@
-package juegoEmbarcaciones.embarcacion.clases;
+package juegoEmbarcaciones.embarcacion;
 
 import java.util.LinkedList;
 
-import juegoEmbarcaciones.carga.interfaces.Carga;
-import juegoEmbarcaciones.embarcacion.interfaces.Cargable;
-import juegoEmbarcaciones.embarcacion.interfaces.Embarcacion;
+import juegoEmbarcaciones.carga.Carga;
 
 public class Bote implements Embarcacion, Cargable{
 	private String nombre;
@@ -28,14 +26,5 @@ public class Bote implements Embarcacion, Cargable{
 	public void setCarga(Carga unaCarga) {
 		// TODO Auto-generated method stub
 		
-	}
-
-	@Override
-	public boolean puedeCargar() throws Exception {
-		if(!(this instanceof Cargable)) {
-			throw new Exception("No se puede cargar");
-		}
-		
-		return true;
 	}
 }

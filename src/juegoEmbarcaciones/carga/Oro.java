@@ -1,7 +1,4 @@
-package juegoEmbarcaciones.carga.clases;
-
-import juegoEmbarcaciones.carga.interfaces.Carga;
-import juegoEmbarcaciones.carga.interfaces.Contable;
+package juegoEmbarcaciones.carga;
 
 public class Oro implements Contable, Carga{
 	public long cantidad;

@@ -1,4 +1,4 @@
-package juegoEmbarcaciones.carga.interfaces;
+package juegoEmbarcaciones.carga;
 
 public interface Carga {
 	long getCantidad();

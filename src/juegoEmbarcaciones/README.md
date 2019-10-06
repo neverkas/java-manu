@@ -25,3 +25,17 @@
 - Horario de apertura
 - Embarcaciones llegan y salen
 - Horario de cierre
+
+# Aprendiendo de los errores
+Observaciones de errores que se cometieron durante el desarrollo del 
+proyecto
+
+### 1. El orden de los argumentos de casos de prueba
+> El primer argumento es el el valor esperado, el segundo es el dato a evaluar
+
+### 2. El nombre de las pruebas unitarias
+> Deben tener como postfijo Test `cargarEmbarcacionTest()`
+
+### 3. Agrupar clases e interfaces, no separar en directorios
+ > Al tratar de organizar en tantas carpetas se puede perder la relación entre interfaz 
+ y las clases que la implementan
